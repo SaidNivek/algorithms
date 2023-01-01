@@ -12,6 +12,10 @@ function validAnagram(word1, word2) {
     // key = the letter
     // value = number of times the letter is in the word
     for (let val of word1) {
+        // This will check to see if the key (letter) is in counter already or not
+        // If it is, the or statement will fizzle, using the value for that letter stored in the object
+        // If it is not, then it will use 0 as the value
+        // Finally, it will add 1 to whatever that value for the letter is
         counter1[val] = (counter1[val] || 0) + 1
     }
 
