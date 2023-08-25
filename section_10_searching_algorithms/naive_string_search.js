@@ -25,8 +25,6 @@ function stringSearch(string, search) {
             }
         }
     }
-
-    console.log('Answer from function:')
     return count
 }
 
