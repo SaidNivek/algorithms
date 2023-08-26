@@ -42,4 +42,4 @@ function naiveSearch(long, short){
     return count;
 }
 
-naiveSearch("lorie loled", "lol")
+console.log(naiveSearch("lorie loled", "lol"))
