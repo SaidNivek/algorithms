@@ -3,11 +3,15 @@ function bubbleSort(arr) {
     let swapped
     // Always need to enter the loop at least once, so do this loop while swapped = true
     // We will exit the loop when swapped = false
+    // Set a variable to reduce the number of array values we need to iterate through each time through the loop
+    let count = 0
     do {
         // Set swapped to false every time we restart the do/while loop
         swapped = false
         // Iterate through the array and compare the numbers in arr[i] and arr[i + 1]
-        for (let i = 0; i < arr.length; i++) {            
+        // We can reduce the number of iterations by the count, since we know the bubble will put the highest number at the end the first time through, etc.
+        // Will make it go a little faster by removing the end of the array each time
+        for (let i = 0; i < arr.length - count; i++) {            
             if (arr[i] > arr[i + 1]) {
                 // If arr[i] is larger than arr[i+1], we create a temp variable and swap their position and move on to the next value in the array
                 temp = arr[i]
@@ -18,6 +22,8 @@ function bubbleSort(arr) {
                 swapped = true
             }
         }
+        // Increment the count up so we don't need to go through as many numbers the next time through the loop
+        count++
     } while (swapped)
     // Return the array once swapped = false, which means no numbers were swapped in the loop
     return arr
