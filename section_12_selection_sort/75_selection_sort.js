@@ -12,7 +12,7 @@ function selectionSort(arr) {
                 lowest = i
                 swapped = true
             }
-            if(i === arr.length - 1 && swapped) {
+            if(i === arr.length - 1) {
                 let temp = arr.splice(lowest, 1)
                 arr.splice(current, 0, temp[0])                
                 current++
