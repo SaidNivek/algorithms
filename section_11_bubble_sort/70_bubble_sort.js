@@ -11,7 +11,8 @@ function bubbleSort(arr) {
         // Iterate through the array and compare the numbers in arr[i] and arr[i + 1]
         // We can reduce the number of iterations by the count, since we know the bubble will put the highest number at the end the first time through, etc.
         // Will make it go a little faster by removing the end of the array each time
-        for (let i = 0; i < arr.length - count; i++) {            
+        for (let i = 0; i < arr.length - count; i++) {      
+            console.log(arr, arr[i], arr[i+1])      
             if (arr[i] > arr[i + 1]) {
                 // If arr[i] is larger than arr[i+1], we create a temp variable and swap their position and move on to the next value in the array
                 temp = arr[i]
@@ -32,3 +33,56 @@ function bubbleSort(arr) {
 
 const anArray = [15, 2, 90, 87, 40, 36, 28, 11, 80, 70, 20, 22, 19]
 console.log(bubbleSort(anArray))
+
+// // UNOPTIMIZED VERSION OF BUBBLE SORT
+// function bubbleSort(arr){
+//     for(var i = arr.length; i > 0; i--){
+//       for(var j = 0; j < i - 1; j++){
+//         console.log(arr, arr[j], arr[j+1]);
+//         if(arr[j] > arr[j+1]){
+//           var temp = arr[j];
+//           arr[j] = arr[j+1];
+//           arr[j+1] = temp;         
+//         }
+//       }
+//     }
+//     return arr;
+//   }
+  
+//   // ES2015 Version
+//   function bubbleSort(arr) {
+//     const swap = (arr, idx1, idx2) => {
+//       [arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]];
+//     };
+  
+//     for (let i = arr.length; i > 0; i--) {
+//       for (let j = 0; j < i - 1; j++) {
+//         if (arr[j] > arr[j + 1]) {
+//           swap(arr, j, j + 1);
+//         }
+//       }
+//     }
+//     return arr;
+//   }
+  
+//   bubbleSort([8,1,2,3,4,5,6,7]);
+
+// // Optimized BubbleSort with noSwaps
+// function bubbleSort(arr){
+//     var noSwaps;
+//     for(var i = arr.length; i > 0; i--){
+//       noSwaps = true;
+//       for(var j = 0; j < i - 1; j++){
+//         if(arr[j] > arr[j+1]){
+//           var temp = arr[j];
+//           arr[j] = arr[j+1];
+//           arr[j+1] = temp;
+//           noSwaps = false;         
+//         }
+//       }
+//       if(noSwaps) break;
+//     }
+//     return arr;
+//   }
+  
+//   bubbleSort([8,1,2,3,4,5,6,7]);
