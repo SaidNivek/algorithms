@@ -1,5 +1,9 @@
-function mergeSort() {
-    return "test"
+function mergeArrays(arr1, arr2) {
+    return (console.log('mergeArrays function'))
 }
 
-console.log(mergeSort())
+function mergeSort() {
+    return mergeArrays()
+}
+
+mergeSort()
