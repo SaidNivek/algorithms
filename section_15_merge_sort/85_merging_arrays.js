@@ -25,3 +25,28 @@ function mergeSort(arr1, arr2) {
 let arr1 = [4, 8, 8, 9, 11, 12, 19, 34]
 let arr2 = [1, 3, 7, 70, 74]
 console.log(mergeSort(arr1, arr2))
+
+// Function from the videos.
+// function merge(arr1, arr2){
+//     let results = [];
+//     let i = 0;
+//     let j = 0;
+//     while(i < arr1.length && j < arr2.length){
+//         if(arr2[j] > arr1[i]){
+//             results.push(arr1[i]);
+//             i++;
+//         } else {
+//             results.push(arr2[j])
+//             j++;
+//         }
+//     }
+//     while(i < arr1.length) {
+//         results.push(arr1[i])
+//         i++;
+//     }
+//     while(j < arr2.length) {
+//         results.push(arr2[j])
+//         j++;
+//     }
+//     return results;
+// }
