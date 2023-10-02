@@ -24,6 +24,10 @@ function mergeArrays(arr1, arr2) {
 // USES RECURSION!
 
 function mergeSort(arr1, arr2) {
+    while(arr1.length > 1) {
+        
+    }
+    
     return mergeArrays(arr1, arr2)
 }
 
